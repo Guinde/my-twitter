@@ -1,0 +1,12 @@
+if tweets
+each tweet in tweets
+    div(class="card tweet-element")
+        div(class="card-body d-flex flex-column")
+            div(class="d-flex flex-row justify-content-center pb-2")
+                img( width="30" height="30" src=tweet.author.avatar)
+                span(class="flex-fill ml-2")= tweet.author.username
+                if editable && tweet.author._id.toString() === currentUser._id.toString()
+                    div(class="d-flex flex-row justify-content-center")
+                        a(class="material-icons pr-2" href="/tweet/edit/" + tweet._id) edit
+                        i(class="material-icons delete-tweet text-danger pointer-cursor" tweetid=tweet._id) delete
+            div= tweet.content
