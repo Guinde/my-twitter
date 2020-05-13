@@ -10,10 +10,3 @@ try {
 } catch(e) {
     console.log("Connection fail ! => " + e);
 }
-
-// mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
-// .then(() => {
-//     console.log("Connect to the database");
-// }).catch((err) => {
-//     console.log("Connection fail ! => " + err);
-// });

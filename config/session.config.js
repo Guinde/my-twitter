@@ -1,10 +1,11 @@
 const { app } = require("../app");
+const { secretSession } = require("../secret/secret");
 const session = require('express-session');
 const mongoStore = require ('connect-mongo')(session);
 const mongoose = require("mongoose");
 
 app.use(session({
-    secret: "a9z8E7r6t5Y4",
+    secret: secretSession,
     resave: false,
     saveUninitialized: false,
     cookie: {

@@ -5,7 +5,6 @@ exports.getTweet = (tweetId) => {
 }
 
 exports.createTweet = (tweet) => {
-    console.log("good =>", tweet)
     const newTweet = new Tweet(tweet);
     return newTweet.save();
 }
