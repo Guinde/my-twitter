@@ -1,5 +1,8 @@
 # db
-/environment
+environment/
 
-# dependencies
-/node_modules
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
